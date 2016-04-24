@@ -15,7 +15,7 @@ body {
   color: #fed136;
 }
 p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.75;
 }
 p.large {
@@ -107,8 +107,8 @@ fieldset[disabled] .btn-primary.active {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: 3px;
-  font-size: 18px;
+  border-radius: 5px;
+  font-size: 30px;
   padding: 20px 40px;
 }
 .btn-xl:hover,
@@ -169,7 +169,7 @@ fieldset[disabled] .btn-xl.active {
   border-color: #fed136;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: white;
+  background-color: black;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -199,7 +199,7 @@ fieldset[disabled] .btn-xl.active {
 }
 @media (min-width: 768px) {
   .navbar-default {
-    background-color: transparent;
+    background-color: black;
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
@@ -293,7 +293,7 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
   section {
-    padding: 100px 0;
+    padding: 175px 0;
   }
 }
 .service-heading {
@@ -601,10 +601,10 @@ section#contact .section-heading {
   
 }
 
-
 section#contact .form-group {
   margin-bottom: 28px;
 }
+
 section#contact .form-group input,
 section#contact .form-group textarea {
   padding: 20px;
@@ -615,10 +615,34 @@ section#contact .form-group input.form-control {
 section#contact .form-group textarea.form-control {
   height: 236px;
 }
-section#contact .form-control:focus {
+
+section#about .form-group {
+  margin-bottom: 28px;
+}
+
+section#about .form-group input,
+section#about .form-group textarea {
+  padding: 20px;
+}
+section#about .form-group input.form-control {
+  height: auto;
+}
+section#about .form-group textarea.form-control {
+  height: 236px;
+}
+
+section#about .form-control:focus {
   border-color: #fed136;
   box-shadow: none;
 }
+
+section#about ::-webkit-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+
 section#contact ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -774,4 +798,10 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #fed136;
+}
+
+.center_div{
+    margin: 0 auto;
+    width:50%; /* value of your choice which suits your alignment */
+    min-width: 400px;
 }

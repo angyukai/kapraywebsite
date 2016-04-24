@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Designers</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/signups/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/signups/css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/signups/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Designer's Shop</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#designers.html">Designers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    
+ <!-- About Section -->
+    <section id="about">
+        <div class="container center_div">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Got A Question?</h2>
+                    <h3 class="section-subheading text-muted">Let us know how we can help you!</h3>
+                </div>
+                
+                <form action="signup" class="signup" name="sentMessage" id="contactForm" method="POST" novalidate>
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" name="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" name="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--make the box of this bigger-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Message <<<POSSIBLE TO MAKE THE BOX  BIGGGER??>>" name="message" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button type="submit" class="btn btn-xl"><font color=black>Submit</font></button>
+            </div>
+        
+        </div>
+        </div>
+    </form>
+            
+        <!--    <div class="clearfix"></div>-->
+        <!--    </div>-->
+        <!--    <div class="row">-->
+        <!--        <div class="col-lg-12">-->
+        <!--            <ul class="timeline">-->
+        <!--                <li>-->
+        <!--                    <div class="timeline-image">-->
+        <!--                        <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">-->
+        <!--                    </div>-->
+        <!--                    <div class="timeline-panel">-->
+        <!--                        <div class="timeline-heading">-->
+        <!--                            <h3 class="subheading">Create Your own Ecwid Account!</h3>-->
+        <!--                        </div>-->
+        <!--                        <div class="timeline-body">-->
+        <!--                            <p class="text-muted">Ecwid is a free, easy-to-use third party E-commerce service that integrates seamlessly into our website. -->
+        <!--                            <b>https://www.ecwid.com/</b> </p>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </li>-->
+        <!--                <li class="timeline-inverted">-->
+        <!--                    <div class="timeline-image">-->
+        <!--                        <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">-->
+        <!--                    </div>-->
+        <!--                    <div class="timeline-panel">-->
+        <!--                        <div class="timeline-heading">-->
+        <!--                            <h3 class="subheading">Upload and Customize</h3>-->
+        <!--                        </div>-->
+        <!--                        <div class="timeline-body">-->
+        <!--                            <p class="text-muted">After creating an account, you can follow its simple tutorial which guides you on how to upload products and customize payment options.</p>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </li>-->
+        <!--                <li>-->
+        <!--                    <div class="timeline-image">-->
+        <!--                        <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">-->
+        <!--                    </div>-->
+        <!--                    <div class="timeline-panel">-->
+        <!--                        <div class="timeline-heading">-->
+        <!--                            <h3 class="subheading">Integrate With Us</h3>-->
+        <!--                        </div>-->
+        <!--                        <div class="timeline-body">-->
+        <!--                            <p class="text-muted">After you are satisfied with your Ecwid shop, email us your website integration code (instructions provided) and we will integrate your shop into our website.</p>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </li>-->
+        <!--                <li class="timeline-inverted">-->
+        <!--                    <div class="timeline-image">-->
+        <!--                        <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">-->
+        <!--                    </div>-->
+        <!--                    <div class="timeline-panel">-->
+        <!--                        <div class="timeline-heading">-->
+        <!--                            <h4 class="subheading">Phase Two Expansion</h4>-->
+        <!--                        </div>-->
+        <!--                        <div class="timeline-body">-->
+        <!--                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </li>-->
+        <!--                <li class="timeline-inverted">-->
+        <!--                    <div class="timeline-image">-->
+        <!--                        <h4>Be Part-->
+        <!--                            <br>Of Our-->
+        <!--                            <br>Story!</h4>-->
+        <!--                    </div>-->
+        <!--                </li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
+    </section>
+
+   
+    
+    <!-- About Section -->
+    <!--<section id="about">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12 text-center">-->
+    <!--                <h2 class="section-heading">About</h2>-->
+    <!--                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row text-center">-->
+    <!--            <div class="col-md-4">-->
+    <!--                <span class="fa-stack fa-4x">-->
+    <!--                    <i class="fa fa-circle fa-stack-2x text-primary"></i>-->
+    <!--                    <i class="fa fa-group fa-stack-1x fa-inverse"></i>-->
+    <!--                </span>-->
+    <!--                <h4 class="service-heading">Our Team</h4>-->
+    <!--                <p class="text-muted">One Pakistani, one Singaporean, one Indian, one American – all working together to expose Pakistani designers' works of art and to revolutionize the fashion industry in doing so.</p>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-4">-->
+    <!--                <span class="fa-stack fa-4x">-->
+    <!--                    <i class="fa fa-circle fa-stack-2x text-primary"></i>-->
+    <!--                    <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>-->
+    <!--                </span>-->
+    <!--                <h4 class="service-heading">Our Mission</h4>-->
+    <!--                <p class="text-muted">Just Kapray links the budding small-scale and home based Pakistani designers with the larger Pakistani market to provide them custom-made clothes at negotiable prices.</p>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-4">-->
+    <!--                <span class="fa-stack fa-4x">-->
+    <!--                    <i class="fa fa-star fa-stack-2x text-primary"></i>-->
+    <!--                    <i class="fa fa-user fa-stack-1x fa-inverse"></i>-->
+    <!--                </span>-->
+    <!--                <h4 class="service-heading">Our Designers</h4>-->
+    <!--                <p class="text-muted">We have surveyed through our curated designers' designs and we have found them to be uniquely refreshing, high-quality and absolutely stunning!.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+        
+        
+    <!--</section>-->
+    
+     <!-- Collaborations Grid Section -->
+    <!--<section id="collaborations" class="bg-light-gray">-->
+    
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12 text-center">-->
+    <!--                <h2 class="section-heading">Collaborations</h2>-->
+    <!--                <h3 class="section-subheading text-muted">From the Finest Collections</h3>-->
+    <!--            </div>-->
+    <!--        </div>-->
+            
+            
+    <!--        <div class="row">-->
+                
+                <!--dress1-->
+    <!--            <div class="col-md-3 col-sm-6 portfolio-item">-->
+    <!--                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">-->
+    <!--                    <div class="portfolio-hover">-->
+    <!--                        <div class="portfolio-hover-content">-->
+                                <!--<i class="fa fa-plus fa-3x"></i>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div id = "featuredress1" class="img-container" style="background-image:url('/static/signups/img/collaborations/dress1.jpg')"></div>-->
+                        <!--<img src="static/signups/img/collaborations/dress1.jpg" class="img-responsive" alt="">-->
+    <!--                </a>-->
+    <!--                <div class="portfolio-caption">-->
+    <!--                    <h4>Mahreen Gul</h4>-->
+    <!--                    <p class="text-muted">Coming Summer 2016</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+                
+                <!--dress2-->
+    <!--            <div class="col-md-3 col-sm-6 portfolio-item">-->
+    <!--                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">-->
+    <!--                    <div class="portfolio-hover">-->
+    <!--                        <div class="portfolio-hover-content">-->
+                                <!--<i class="fa fa-plus fa-3x"></i>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div id = "featuredress2" class="img-container" style="background-image:url('/static/signups/img/collaborations/dress2.jpg')"></div>-->
+                        <!--<img src="static/signups/img/collaborations/dress2.jpg" class="img-responsive" alt="">-->
+    <!--                </a>-->
+    <!--                <div class="portfolio-caption">-->
+    <!--                    <h4>Her Clothes by Gulrukh</h4>-->
+    <!--                    <p class="text-muted">Coming Summer 2016</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+                
+                <!--dress3-->
+    <!--            <div class="col-md-3 col-sm-6 portfolio-item">-->
+    <!--                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">-->
+    <!--                    <div class="portfolio-hover">-->
+    <!--                        <div class="portfolio-hover-content">-->
+                                <!--<i class="fa fa-plus fa-3x"></i>-->
+    <!--                            <div id = "featuredress3" class="img-container" style="background-image:url('/static/signups/img/collaborations/dress3.jpg')"></div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+                        <!--<div id = "featuredress3" class="img-container" style="background-image:url('/static/signups/img/collaborations/dress3.jpg')"></div>-->
+                        <!--<img src="static/signups/img/collaborations/dress3.jpg" class="img-responsive" alt="">-->
+    <!--                </a>-->
+    <!--                <div class="portfolio-caption">-->
+    <!--                    <h4>Sui</h4>-->
+    <!--                    <p class="text-muted">Coming Summer 2016</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+                
+                <!--dress4-->
+    <!--            <div class="col-md-3 col-sm-6 portfolio-item">-->
+    <!--                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">-->
+    <!--                    <div class="portfolio-hover">-->
+    <!--                        <div class="portfolio-hover-content">-->
+                                <!--<i class="fa fa-shopping-cart fa-3x"></i>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div id = "featuredress4" class="img-container" style="background-image:url('/static/signups/img/collaborations/dress4.png')"></div>-->
+                        <!--<img src="static/signups/img/collaborations/dress4.png" class="img-responsive" alt="">-->
+    <!--                </a>-->
+    <!--                <div class="portfolio-caption">-->
+    <!--                    <h4>Noor</h4>-->
+    <!--                    <p class="text-muted">Website Design</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+                <!--<div class="col-md-4 col-sm-6 portfolio-item">-->
+                <!--    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">-->
+                <!--        <div class="portfolio-hover">-->
+                <!--            <div class="portfolio-hover-content">-->
+                <!--                <i class="fa fa-plus fa-3x"></i>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--        <img src="img/portfolio/escape.png" class="img-responsive" alt="">-->
+                <!--    </a>-->
+                <!--    <div class="portfolio-caption">-->
+                <!--        <h4>Escape</h4>-->
+                <!--        <p class="text-muted">Website Design</p>-->
+                <!--    </div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4 col-sm-6 portfolio-item">-->
+                <!--    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">-->
+                <!--        <div class="portfolio-hover">-->
+                <!--            <div class="portfolio-hover-content">-->
+                <!--                <i class="fa fa-plus fa-3x"></i>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">-->
+                <!--    </a>-->
+                <!--    <div class="portfolio-caption">-->
+                <!--        <h4>Dreams</h4>-->
+                <!--        <p class="text-muted">Website Design</p>-->
+                <!--    </div>-->
+                <!--</div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+
+
+ 
+    
+    <!--Signup now-->
+
+    <!--<section id="contact">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12 text-center">-->
+    <!--                <h2 id = "signup-msg" class="section-heading">Sign Up and Find Out About Latest Designs!</h2>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-12">-->
+    <!--                {% block content %}-->
+    <!--                {% endblock %}-->
+                    
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="static/signups/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/signups/js/bootstrap.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="static/signups/js/agency.js"></script>
+
+</body>
+
+</html>
