@@ -2,68 +2,175 @@
         
 {% block content %}
 
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">Just Kapray & Co.</div>
+                <div class="intro-lead-in">Uniquely Designed Clothes for You at Your Convenience and Prices</div>
+                <a href="#contact" class="page-scroll btn btn-xl">Get Started!</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-group fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Our Team</h4>
+                    <p class="text-muted">One Pakistani, one Singaporean, one Indian, one American – all working together to expose Pakistani designers' works of art and to revolutionize the fashion industry in doing so.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Our Mission</h4>
+                    <p class="text-muted">Just Kapray links the budding small-scale and home based Pakistani designers with the larger Pakistani market to provide them custom-made clothes at negotiable prices.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-star fa-stack-2x text-primary"></i>
+                        <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Our Designers</h4>
+                    <p class="text-muted">We have surveyed through our curated designers' designs and we have found them to be uniquely refreshing, high-quality and absolutely stunning!.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    
+    <!--Featured designers-->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Featured Designers</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a href="/shopfront" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="static/signups/img/designers/sui.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Sui</h4>
+                        <!--<p class="text-muted">Graphic Design</p>-->
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a href="/shopfront" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="static/signups/img/designers/gul.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Mahreen Gul</h4>
+                        <!--<p class="text-muted">Website Design</p>-->
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a href="/shopfront" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="static/signups/img/designers/gulrukh.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Gulrukh</h4>
+                        <!--<p class="text-muted">Website Design</p>-->
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a href="/shopfront" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="static/signups/img/designers/noor.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Noor</h4>
+                        <!--<p class="text-muted">Website Design</p>-->
+                    </div>
+                </div>
+                
+    </section>
+ 
+    
+    
+    <!--Buy or sell option-->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <!--<h2 id = "signup-msg" class="section-heading">Sign Up and Find Out About Latest Designs!</h2>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="designers" class="designers" name="sentMessage" id="contactForm" method="POST" novalidate>
+                        {% csrf_token %}
+
+                        <div class="col-lg-6 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl">
+                                <span style="font-size: 32px;"> 
+                                    <font color = red>buy</font> 
+                                    <span style="font-weight:normal;">clothes!</span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+    
+                    <form action="sellerregister" class="signup" name="sentMessage" id="contactForm" method="POST" novalidate>
+                        {% csrf_token %}
+                        <div class="col-lg-6 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl"> 
+                                <span style="font-size: 32px;">
+                                    <font color = red>sell</font> 
+                                    <span style="font-weight:normal;">clothes!</span>
+                                </span>
+                            </button>
+                        </div>
+                        </div>
+                    </form>
+                                    
+                </div>
+            </div>
+        </div>
+    </section>
+
   
   
 
-    <form action="designers" class="designers" name="sentMessage" id="contactForm" method="POST" novalidate>
-        {% csrf_token %}
-        <!--<div class="row">-->
-        <!--    <div class="col-md-6">-->
-        <!--        <div class="form-group">-->
-        <!--            <input type="text" class="form-control" placeholder="Your Name *" name="name" required data-validation-required-message="Please enter your name.">-->
-        <!--            <p class="help-block text-danger"></p>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--    <div class="col-md-6">-->
-        <!--        <div class="form-group">-->
-        <!--            <input type="email" class="form-control" placeholder="Your Email *" name="email" required data-validation-required-message="Please enter your email address.">-->
-        <!--            <p class="help-block text-danger"></p>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--    <div class="clearfix"></div>-->
-            <div class="col-lg-6 text-center">
-                <div id="success"></div>
-                <button type="submit" class="btn btn-xl">
-                    <span style="font-size: 32px;"> 
-                        <font color = red>buy</font> 
-                        <span style="font-weight:normal;">clothes!</span>
-                    </span>
-                </button>
-            </div>
-    </form>
-    
-     <form action="sellerregister" class="signup" name="sentMessage" id="contactForm" method="POST" novalidate>
-        {% csrf_token %}
-        <!--<div class="row">-->
-        <!--    <div class="col-md-6">-->
-        <!--        <div class="form-group">-->
-        <!--            <input type="text" class="form-control" placeholder="Your Name *" name="name" required data-validation-required-message="Please enter your name.">-->
-        <!--            <p class="help-block text-danger"></p>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--    <div class="col-md-6">-->
-        <!--        <div class="form-group">-->
-        <!--            <input type="email" class="form-control" placeholder="Your Email *" name="email" required data-validation-required-message="Please enter your email address.">-->
-        <!--            <p class="help-block text-danger"></p>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--    <div class="clearfix"></div>-->
-            <!--<div class="col-lg-6 text-center">-->
-            <!--    <div id="success"></div>-->
-            <!--    <button type="submit" class="btn btn-xl">I want to sell stuff!</button>-->
-            <!--</div>-->
-            
-        <div class="col-lg-6 text-center">
-            <div id="success"></div>
-            <button type="submit" class="btn btn-xl"> 
-                <span style="font-size: 32px;">
-                    <font color = red>sell</font> 
-                    <span style="font-weight:normal;">clothes!</span>
-                </span>
-            </button>
-        </div>
-        </div>
-    </form>
+   
 
 {% endblock %}
 
