@@ -21,8 +21,7 @@ def signup(request):
 		brand = request.POST['brand']
 		sample = request.POST['sample']
 		
- 		designer = Designer.objects.create(name=name, email=email, brand = brand, sample = sample)
-		designer.save()
+ 		designer = Designer.create(name=name, email=email, brand = brand, sample = sample)
 		
 		return render(request,'signups/signups.html')
 

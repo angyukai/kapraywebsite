@@ -11,15 +11,27 @@ from django import forms
 #     samples = models.CharField(max_length = 500)
 
 
-class Designer(models.Model):
-    # user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200)
-    email = models.CharField(max_length = 250)
-    brand = models.CharField(max_length = 500)
-    sample = models.CharField(max_length = 500)
+# class Designer(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     name = models.CharField(max_length=200)
+#     email = models.CharField(max_length = 250)
+#     brand = models.CharField(max_length = 500)
+#     sample = models.CharField(max_length = 500)
     
-    # @classmethod
-    # def create_designer(cls, name,email,brand,sample):
-    #     designer = cls(name=name, email=email, brand=brand, sample=sample)
-    #     # do something with the book
-    #     return designer
+#     # @classmethod
+#     # def create_designer(cls, name,email,brand,sample):
+#     #     designer = cls(name=name, email=email, brand=brand, sample=sample)
+#     #     # do something with the book
+#     #     return designer
+
+class Designer(models.Model):
+	name = models.CharField(max_length=200)
+	email = models.EmailField(max_length=500)
+	brand = models.CharField(max_length=200)
+	sample = models.CharField(max_length=500)
+
+	@classmethod
+	def create(cls, name, email, brand, sample):
+		designer = cls(name=name, email=email, brand=brand, sample=sample)
+		# do something with the book
+		return designer
