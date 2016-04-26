@@ -22,7 +22,7 @@ def signup(request):
 		sample = request.POST['sample']
 		
  		designer = Designer.create(name=name, email=email, brand = brand, sample = sample)
-		
+		designer.save()
 		return render(request,'signups/signups.html')
 
 def designers(request):
