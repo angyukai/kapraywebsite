@@ -805,3 +805,8 @@ body {
     width:50%; /* value of your choice which suits your alignment */
     min-width: 400px;
 }
+
+/*ecwid stuff*/
+div.ecwid-productBrowser-auth {  
+display: none;
+}
