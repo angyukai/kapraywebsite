@@ -3,6 +3,8 @@ from django.http import HttpResponseRedirect
 from django.template import loader
 from forms import SignUpForm
 from models import Designer
+
+from django.core.mail import send_mail
 # from models import CustomerUser
 
 # Create your views here.
@@ -23,6 +25,12 @@ def signup(request):
 		
  		designer = Designer.create(name=name, email=email, brand = brand, sample = sample)
 		designer.save()
+		send_mail(
+			'New User', 
+			'New Designer signed up. \nName:'+designer.name+'\nEmail:'+designer.email+'\nSample:'+designer.sample, 
+			'noreply@justkapray.online',
+    		['justkapray@gmail.com'], 
+    		fail_silently=False)
 		return render(request,'signups/signups.html')
 
 def designers(request):

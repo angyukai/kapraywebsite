@@ -132,3 +132,9 @@ STATIC_URL = '/static/'
 # https://warehouse.python.org/projs.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'noreplyjustkapray@gmail.com'
+EMAIL_HOST_PASSWORD = 'justkiddin'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
