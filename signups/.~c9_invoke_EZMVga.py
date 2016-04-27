@@ -29,7 +29,7 @@ def signup(request):
 			'New User', 
 			'New Designer signed up. \nName:'+designer.name+'\nEmail:'+designer.email+'\nSample:'+designer.sample, 
 			'noreply@justkapray.online',
-    		['justkapray@gmail.com'], 
+    ['justkapray@gmail.com'], fail_silently=False)
     		fail_silently=False)
 		return render(request,'signups/signups.html')
 
@@ -51,13 +51,7 @@ def contact(request):
 
 		name = request.POST['name']
 		email = request.POST['email']
-		message = request.POST['message']
-		
-		send_mail(
-			'New Message from '+name, 
-			'Name:'+name+'\nEmail:'+email+'\nMessage:\n'+message, 
-			'noreply@justkapray.online',
-    		['justkapray@gmail.com'], 
-    		fail_silently=False)
+		brand = request.POST['brand']
+		sample = request.POST['sample']
 	return render(request, 'signups/contact.html')
 

@@ -51,13 +51,87 @@ def contact(request):
 
 		name = request.POST['name']
 		email = request.POST['email']
-		message = request.POST['message']
-		
-		send_mail(
-			'New Message from '+name, 
-			'Name:'+name+'\nEmail:'+email+'\nMessage:\n'+message, 
-			'noreply@justkapray.online',
-    		['justkapray@gmail.com'], 
-    		fail_silently=False)
+		brand = request.POST['brand']
+		sample = request.POST['sample']
 	return render(request, 'signups/contact.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
